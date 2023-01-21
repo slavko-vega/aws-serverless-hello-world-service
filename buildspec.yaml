@@ -24,7 +24,8 @@ phases:
       - zip -j ./hellow-world-service.zip ./build/*
 artifacts:
   files:
-      - hellow-world-service.zip
+      - build/*
+    # - hellow-world-service.zip
     # - dist/**/*
     # - package.json
     # - package-lock.json
