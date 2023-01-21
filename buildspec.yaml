@@ -21,10 +21,11 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - zip -j ./hellow-world-service.zip ./build/*
+      # - zip -j ./hellow-world-service.zip ./build/*
+      - cp ./build/index.js ./index.js
 artifacts:
   files:
-      - build/index.js
+      - index.js
     # - hellow-world-service.zip
     # - dist/**/*
     # - package.json
