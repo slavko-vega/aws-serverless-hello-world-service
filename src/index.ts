@@ -2,8 +2,8 @@ import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 
 
 export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
-    const responseMessage = `Hello World ${event.body}`;
-    
+    const responseMessage = `Hello World ${event.body} ${event.queryStringParameters}`;
+
     return {
         headers: {
             'Content-Type': 'application/json',
